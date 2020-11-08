@@ -9,11 +9,13 @@ public class SavingsAccount extends BankAccount{
 		super(name, amount);
 		this.accountNumber = super.getAccountNumber() + "-" + savingsNumber++;
 	}
+	
+	//This is the copy constructor. What it should do is add 1 to savingsNumber each time 
 	public SavingsAccount(SavingsAccount oldSavingAcc, double amount)
 	{
 		super(oldSavingAcc, amount);
-		accountNumber = super.getAccountNumber() + "-" + oldSavingAcc.savingsNumber++; 
-		
+		this.savingsNumber = oldSavingAcc.savingsNumber;
+		accountNumber = super.getAccountNumber() + "-" + savingsNumber++;
 	}
 	public void postInterest()
 	{
@@ -22,7 +24,5 @@ public class SavingsAccount extends BankAccount{
 	@Override
 	public String getAccountNumber() {
 		return accountNumber;
-	}
-			
-	
+	}	
 }
