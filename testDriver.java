@@ -19,5 +19,19 @@ public class testDriver {
 		System.out.println("e: " + e.getAccountNumber());//Should return 100002-1
 		SavingsAccount f = new SavingsAccount(e, 2000);
 		System.out.println("f: " + f.getAccountNumber());//Should return 100002-2
+		
+		System.out.println();
+		
+		SavingsAccount g = new SavingsAccount(c, 2000);
+		System.out.println("g: " + g.getAccountNumber());//Should return 100001-3
+		SavingsAccount h = new SavingsAccount (f, 2000);
+		System.out.println("h: " + h.getAccountNumber());//Should return 100002-3
+		
+		System.out.println();
+		
+		SavingsAccount i = new SavingsAccount(c, 2000);
+		System.out.println("i: " + i.getAccountNumber());//Should return 100001-4
+		SavingsAccount j = new SavingsAccount (f, 2000);
+		System.out.println("j: " + j.getAccountNumber());//Should return 100002-4
 	}
 }
